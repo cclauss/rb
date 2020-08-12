@@ -5,7 +5,7 @@ from bisect import bisect
 
 
 def md5_bytes(key):
-    return map(ord, hashlib.md5(key).digest())
+    return bytearray(hashlib.md5(key.encode("utf-8")).digest())
 
 
 class Ketama(object):
